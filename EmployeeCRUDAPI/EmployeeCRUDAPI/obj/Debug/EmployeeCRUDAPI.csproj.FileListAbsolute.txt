@@ -1,0 +1,186 @@
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EmployeeCRUDAPI.dll.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EmployeeCRUDAPI.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EmployeeCRUDAPI.pdb
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csc.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csc.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csc.rsp
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csi.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csi.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csi.rsp
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.AppContext.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Console.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Claims.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\vbc.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\vbc.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\vbc.rsp
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Antlr3.Runtime.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Newtonsoft.Json.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Helpers.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Mvc.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Optimization.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Razor.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\WebGrease.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Newtonsoft.Json.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Helpers.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Mvc.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Optimization.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Razor.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Antlr3.Runtime.pdb
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.csprojAssemblyReference.cache
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.csproj.CoreCompileInputs.cache
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.csproj.CopyComplete
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.pdb
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Cors.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.Cors.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.Cors.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EmployeeCRUDAPI.dll.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EmployeeCRUDAPI.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EmployeeCRUDAPI.pdb
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csc.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csc.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csc.rsp
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csi.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csi.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\csi.rsp
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.AppContext.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Console.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.Compression.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.IO.Pipes.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Claims.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.ValueTuple.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.XPath.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\vbc.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\vbc.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\vbc.rsp
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\VBCSCompiler.exe
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Antlr3.Runtime.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Newtonsoft.Json.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Net.Http.Formatting.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Cors.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Helpers.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.Cors.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.WebHost.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Mvc.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Optimization.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Razor.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Razor.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\WebGrease.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Net.Http.Formatting.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.Cors.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Newtonsoft.Json.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Helpers.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Http.WebHost.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Mvc.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Optimization.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.Razor.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Web.WebPages.Razor.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Antlr3.Runtime.pdb
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.csprojAssemblyReference.cache
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.csproj.CoreCompileInputs.cache
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.csproj.CopyComplete
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.dll
+C:\Users\khushbupanwala\Documents\Khushbu Panwala\Angular Project\Angular Projects\EmployeeCRUDAPI\EmployeeCRUDAPI\obj\Debug\EmployeeCRUDAPI.pdb

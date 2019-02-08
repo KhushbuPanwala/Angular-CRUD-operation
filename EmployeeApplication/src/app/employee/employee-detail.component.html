@@ -1,0 +1,27 @@
+<div class='card' *ngIf='employee'>
+  <div class='card-header'>
+      <h1>
+          Employee Detail
+      </h1>  
+   
+<table  class="tableCss">
+  <tr>
+    <td class="tdStyle"> Name:</td> 
+    <td> {{employee.Name}}</td> 
+  </tr> 
+  <tr>
+    <td class="tdStyle">  Address:</td> 
+    <td> {{employee.Address}}</td> 
+  </tr>           
+  <tr>
+    <td class="tdStyle"> Salary:</td> 
+    <td> {{employee.Salary|currency:'INR':'symbol'}}</td> 
+  </tr> 
+</table>
+
+  <button mat-raised-button color="primary" matTooltip="Back" (click)="onBack()">BACK</button>  
+  <button mat-raised-button color="accent" matTooltip="Edit" [routerLink]="['/Employee', employee.Id,'edit']">          
+    Edit
+  </button>
+</div>
+</div>   
