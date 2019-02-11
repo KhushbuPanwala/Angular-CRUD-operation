@@ -25,6 +25,8 @@ namespace EmployeeCRUDAPI.Models
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<DepartmentTbl> DepartmentTbls { get; set; }
+        public virtual DbSet<EmployeeTbl> EmployeeTbls { get; set; }
+        public virtual DbSet<UserTbl> UserTbls { get; set; }
     }
 }

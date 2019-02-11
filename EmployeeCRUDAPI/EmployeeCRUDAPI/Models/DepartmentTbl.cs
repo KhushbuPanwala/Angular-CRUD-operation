@@ -12,11 +12,9 @@ namespace EmployeeCRUDAPI.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Employee
+    public partial class DepartmentTbl
     {
-        public int Id { get; set; }
+        public int DeptId { get; set; }
         public string Name { get; set; }
-        public string Address { get; set; }
-        public Nullable<decimal> Salary { get; set; }
     }
 }

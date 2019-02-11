@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../service/authentication.service';
 import { AlertService } from '../service/alert.service';
+import { LoginService } from './login.service';
+import { InnerSubscriber } from 'rxjs/internal/InnerSubscriber';
+import { User } from '../model/user';
 
 
 @Component({templateUrl: 'login.component.html'})
@@ -12,15 +15,19 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
-
+    // users:User[];
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-        private authenticationService: AuthenticationService,
+         private authenticationService: AuthenticationService,
+        //  private loginService: LoginService,
         private alertService: AlertService
     ) {
         // redirect to home if already logged in
+        // if (this.loginService.currentUserValue) { 
+        //     this.router.navigate(['/']);
+        // }
         if (this.authenticationService.currentUserValue) { 
             this.router.navigate(['/']);
         }
@@ -48,15 +55,20 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
+        // this.users =[];    
+        
+        // this.loginService.login(this.f.username.value, this.f.password.value)
         this.authenticationService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
                 data => {
+                    // this.users = data;                        
                     this.router.navigate([this.returnUrl]);
                 },
                 error => {
                     this.alertService.error(error);
                     this.loading = false;
                 });
+                
     }
 }

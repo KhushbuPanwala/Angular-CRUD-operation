@@ -2,9 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { IEmployee } from './employee';
 import { EmployeeService } from './employee.service';
 import { ActivatedRoute, Router } from '@angular/router';
-
-
-import { MatDialog } from '@angular/material';
+import { MatDialog} from '@angular/material';
 import { DialogComponent } from '../shared/dialog.component';
 
 
@@ -14,6 +12,7 @@ import { DialogComponent } from '../shared/dialog.component';
   styleUrls: ['./employee-list.component.css'],  
 })
 export class EmployeeListComponent implements OnInit {
+
   pageTitle: string  ='Employee List';
   employees: IEmployee[];
   errorMessage:'';
@@ -33,7 +32,8 @@ export class EmployeeListComponent implements OnInit {
   const dialogRef = this.dialog.open(DialogComponent, {
       width: '300px' ,      
       data: {
-        dataKey: id
+        dataKey: id,
+        deletionModule:'Employee',
       }
     });
     dialogRef.afterClosed().subscribe(result => {
@@ -46,7 +46,7 @@ export class EmployeeListComponent implements OnInit {
     this.employees =[];    
     this.employeeService.getEmployees().subscribe(
       employee => {
-        this.employees = employee;             
+        this.employees = employee;                     
       },
        error => this.errorMessage = <any>error
     );    

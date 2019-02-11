@@ -17,6 +17,7 @@ import { EmployeeModule } from './employee/employee.module';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
+import { DepartmentModule } from './department/department.module';
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },    
@@ -35,7 +36,6 @@ const appRoutes: Routes = [
         LoginComponent,
         RegisterComponent,
         
-      
     ],
     imports: [
         BrowserModule,
@@ -45,6 +45,7 @@ const appRoutes: Routes = [
         RouterModule.forRoot(appRoutes),
         Ng4LoadingSpinnerModule.forRoot(),
          EmployeeModule,
+         DepartmentModule
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },

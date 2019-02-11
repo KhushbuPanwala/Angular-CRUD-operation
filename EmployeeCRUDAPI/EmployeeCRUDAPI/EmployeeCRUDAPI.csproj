@@ -174,28 +174,36 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Employee.Context.cs">
+    <Compile Include="Models\DepartmentTbl.cs">
+      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeMgnt.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Employee.Context.tt</DependentUpon>
+      <DependentUpon>EmployeeMgnt.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Employee.cs">
-      <DependentUpon>Employee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Employee.Designer.cs">
+    <Compile Include="Models\EmployeeMgnt.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Employee.edmx</DependentUpon>
+      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Employee1.cs">
+    <Compile Include="Models\EmployeeMgnt.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Employee.tt</DependentUpon>
+      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmployeeTbl.cs">
+      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserTbl.cs">
+      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -208,15 +216,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\Employee.Context.tt">
+    <Content Include="Models\EmployeeMgnt.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Employee.edmx</DependentUpon>
-      <LastGenOutput>Employee.Context.cs</LastGenOutput>
+      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
+      <LastGenOutput>EmployeeMgnt.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\Employee.tt">
+    <Content Include="Models\EmployeeMgnt.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Employee.edmx</DependentUpon>
-      <LastGenOutput>Employee1.cs</LastGenOutput>
+      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
+      <LastGenOutput>EmployeeMgnt.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -239,12 +247,12 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\Employee.edmx">
+    <EntityDeploy Include="Models\EmployeeMgnt.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Employee.Designer.cs</LastGenOutput>
+      <LastGenOutput>EmployeeMgnt.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\Employee.edmx.diagram">
-      <DependentUpon>Employee.edmx</DependentUpon>
+    <Content Include="Models\EmployeeMgnt.edmx.diagram">
+      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />

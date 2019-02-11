@@ -16,15 +16,18 @@ namespace EmployeeCRUDAPI.Controllers
     {
         private EmployeeMgntDBEntities db = new EmployeeMgntDBEntities();
         
-        public IEnumerable<Employee> GetAllEmployees()
+        public IEnumerable<EmployeeTbl> GetAllEmployees()
+
         {
-            IList<Employee> employees = db.Employees.ToList();
+            //var employees = db.EmployeeTbls.Include(a => a.DepartmentTbl).AsNoTracking().ToListAsync();
+            
+            IList<EmployeeTbl> employees = db.EmployeeTbls.ToList();
             return employees;
         }
 
         public IHttpActionResult GetEmployeeById(int id)
         {
-            Employee employee = db.Employees.Find(id);
+            EmployeeTbl employee = db.EmployeeTbls.Find(id);
             if (employee == null)
             {
                 return NotFound();
@@ -32,17 +35,17 @@ namespace EmployeeCRUDAPI.Controllers
             return Ok(employee);
         }
 
-        public IHttpActionResult Post(Employee employee)
+        public IHttpActionResult Post(EmployeeTbl employee)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Invalid data.");
 
-            db.Employees.Add(employee);
+            db.EmployeeTbls.Add(employee);
             db.SaveChanges();
             return Ok();
         }
 
-        public IHttpActionResult Put(Employee employee)
+        public IHttpActionResult Put(EmployeeTbl employee)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
@@ -58,8 +61,8 @@ namespace EmployeeCRUDAPI.Controllers
             if (id <= 0)
                 return BadRequest("Not a valid student id");
 
-            Employee employee = db.Employees.Find(id);
-            db.Employees.Remove(employee);
+            EmployeeTbl employee = db.EmployeeTbls.Find(id);
+            db.EmployeeTbls.Remove(employee);
             db.SaveChanges();
             return Ok();
         }

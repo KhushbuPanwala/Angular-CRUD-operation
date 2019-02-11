@@ -1,0 +1,7 @@
+.tp-radio-group {
+    display: inline-flex;
+    flex-direction: column;
+ }
+ .tp-radio-button {
+    margin-left: 5px;
+ }

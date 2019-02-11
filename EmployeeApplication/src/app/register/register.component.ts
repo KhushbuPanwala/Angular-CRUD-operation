@@ -5,6 +5,7 @@ import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../service/authentication.service';
 import { AlertService } from '../service/alert.service';
 import { UserService } from '../service/user.service';
+import { RegistrationService } from './registration.service';
 
 
 
@@ -19,6 +20,7 @@ export class RegisterComponent implements OnInit {
         private router: Router,
         private authenticationService: AuthenticationService,
         private userService: UserService,
+        private registrationService: RegistrationService,
         private alertService: AlertService
     ) { 
         // redirect to home if already logged in
@@ -48,7 +50,8 @@ export class RegisterComponent implements OnInit {
         }
 
         this.loading = true;
-        this.userService.register(this.registerForm.value)
+        // this.userService.register(this.registerForm.value)
+        this.registrationService.addUser(this.registerForm.value)
             .pipe(first())
             .subscribe(
                 data => {

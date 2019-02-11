@@ -29,15 +29,8 @@ export class EmployeeService {
         }
       
          getEmployees(): Observable<any> {
-          
-          // httpOptions.headers.append('Access-Control-Allow-Origin', 'http://localhost:53343/api/home');
-          // httpOptions.headers.append('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-          // httpOptions.headers.append('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-          // httpOptions.headers.append('Access-Control-Allow-Credentials', 'true');
-          // return this.http.get(endpoint + 'Employee').pipe(
-          // return this.http.get(endpoint,httpOptions).pipe(            
-                    return this.http.get(endpoint).pipe(  
-                  map(this.extractData));
+          return this.http.get(endpoint).pipe(  
+            map(this.extractData));
         }
         getEmployee(id): Observable<any> {          
           return this.http.get(endpoint +'/'+  id).pipe(          
@@ -45,22 +38,13 @@ export class EmployeeService {
         }
         
         addEmployee (employee): Observable<any> {          
-          // console.log(employee);
-          // return  this.http.post(endpoint ,JSON.stringify(employee))
-          // .pipe( map(this.extractData) );
-
           return this.http.post(endpoint , JSON.stringify(employee), httpOptions)
           .pipe(
             catchError(this.handleError<any>('addEmployee')));
-
-          // return this.http.post<any>(endpoint + 'Employee', JSON.stringify(employee), httpOptions).pipe(
-          //   tap((product) => console.log(`added product w/ id=${product.id}`)),
-          //   catchError(this.handleError<any>('addProduct'))
-          // );
         }
         
-        updateEmployee (id, employee): Observable<any> {          
-            return this.http.put(endpoint + '/' + id, JSON.stringify(employee), httpOptions).pipe(
+        updateEmployee (id, employee): Observable<any> {                    
+             return this.http.put(endpoint + '/' + id, JSON.stringify(employee), httpOptions).pipe(            
             catchError(this.handleError<any>('updateEmployee'))
           );          
         }

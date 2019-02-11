@@ -5,8 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogModule } from '@angular/material';
-
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogModule,MatRadioModule,MatDatepickerModule } from '@angular/material';
 import { DialogComponent } from '../shared/dialog.component';
 import { AuthGuard } from '../auth/auth.guard';
 
@@ -71,6 +70,8 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatIconModule,
     MatDialogModule,
+    MatRadioModule,
+    MatDatepickerModule,
     RouterModule.forRoot(appRoutes),  
     Ng4LoadingSpinnerModule.forRoot(),
   ],

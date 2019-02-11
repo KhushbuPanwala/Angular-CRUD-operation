@@ -1,26 +1,93 @@
-<h2>Add Employee</h2>   
+<h2>Update Employee</h2>
 <form [formGroup]="employeeUpdateForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-                <label for="id">Id</label>
-                <input type="text" formControlName="id" class="form-control"
-                    [ngClass]="{ 'is-invalid': submitted && f.id.errors }" 
-                    [(ngModel)]="employee.Id"/>
-                <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
-                    <div *ngIf="f.id.errors.required">First Name is required</div>
-                </div>
-            </div>
     <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" formControlName="name" class="form-control"
-            [ngClass]="{ 'is-invalid': submitted && f.name.errors }" 
-            [(ngModel)]="employee.Name"/>
-        <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
-            <div *ngIf="f.name.errors.required">First Name is required</div>
+        <label for="empId">Employee Id</label>
+        <input type="text" formControlName="empId" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.empId.errors }"
+            [(ngModel)]="employee.EmpId"/>
+        <div *ngIf="submitted && f.empId.errors" class="invalid-feedback">
+            <div *ngIf="f.empId.errors.required">Employee Id is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" formControlName="firstName" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"
+            [(ngModel)]="employee.FirstName"/>
+        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" formControlName="lastName" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }"
+            [(ngModel)]="employee.LastName"/>
+        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" formControlName="email" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.email.errors }"
+            [(ngModel)]="employee.Email"/>
+        <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>            
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="mobileNo">Mobile No.</label>
+        <input type="text" formControlName="mobileNo" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.mobileNo.errors }"
+            [(ngModel)]="employee.MobileNo"/>
+        <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
+            <div *ngIf="f.mobileNo.errors.required">Mobile No. is required</div>
+            <div *ngIf="f.mobileNo.errors.minlength">Mobile No. must be equal to 10 digit</div>
+        </div>
+    </div>    
+    
+    <!-- {{employee.BirthDate | date:'MMM dd, yyyy'}} -->
+    <div class="form-group">        
+        <label for="birthDate"   style="width:100%">Birth Date</label>          
+        <input  [matDatepicker]="birthDate"   class="form-control"        
+            formControlName="birthDate"  style="width:95%;display: inline-block"           
+            [ngClass]="{ 'is-invalid': submitted && f.birthDate.errors }"
+            [(ngModel)]="employee.BirthDate">
+        <mat-datepicker-toggle matSuffix [for]="birthDate" style="width:5%;display: inline-block" >                
+        </mat-datepicker-toggle>
+        <mat-datepicker #birthDate style="width:5%;display: inline-block" ></mat-datepicker>        
+        <div *ngIf="submitted && f.birthDate.errors" class="invalid-feedback">
+            <div *ngIf="f.birthDate.errors.required">Birth Date is required</div>
+        </div>
+    </div>
+ 
+    <div class="form-group">
+        <label for="joiningDate">Joining Date</label>
+        <input  [matDatepicker]="joiningDate"   class="form-control"        
+        formControlName="joiningDate"  style="width:95%;display: inline-block"
+        [ngClass]="{ 'is-invalid': submitted && f.joiningDate.errors }"
+        [(ngModel)]="employee.JoiningDate">
+        <mat-datepicker-toggle matSuffix [for]="joiningDate" style="width:5%;display: inline-block" >                
+        </mat-datepicker-toggle>
+        <mat-datepicker #joiningDate style="width:5%;display: inline-block" ></mat-datepicker>        
+        <div *ngIf="submitted && f.joiningDate.errors" class="invalid-feedback">
+            <div *ngIf="f.joiningDate.errors.required">Joining Date is required</div>
+        </div>      
+    </div>
+    <div class="form-group">
+        <label for="deptId">Department</label>
+        <input type="text" formControlName="deptId" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.deptId.errors }"
+            [(ngModel)]="employee.DeptId"/>
+        <div *ngIf="submitted && f.deptId.errors" class="invalid-feedback">
+            <div *ngIf="f.deptId.errors.required">Department is required</div>
         </div>
     </div>
     <div class="form-group">
         <label for="address">Address</label>
-        <input type="text" formControlName="address" class="form-control" 
+        <input type="text" formControlName="address" class="form-control"
         [ngClass]="{ 'is-invalid': submitted && f.address.errors }"
         [(ngModel)]="employee.Address" />
         <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
@@ -29,25 +96,42 @@
     </div>
     <div class="form-group">
         <label for="salary">Salary</label>
-        <input type="text" formControlName="salary" class="form-control" 
-        [ngClass]="{ 'is-invalid': submitted && f.salary.errors }" 
+        <input type="text" formControlName="salary" class="form-control"
+        [ngClass]="{ 'is-invalid': submitted && f.salary.errors }"
         [(ngModel)]="employee.Salary"/>
         <div *ngIf="submitted && f.salary.errors" class="invalid-feedback">
             <div *ngIf="f.salary.errors.required">Salary is required</div>
         </div>
     </div>
-    <!-- <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
-        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-            <div *ngIf="f.password.errors.required">Password is required</div>
-            <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
-        </div>
-    </div> -->
+   
+    
     <div class="form-group">
-        <button [disabled]="loading" class="btn btn-primary">Save</button>
+        <label for="category">Category</label>
+        <mat-select   [(ngModel)]="employee.Category"
+             formControlName="category" class="form-control">
+            <mat-option *ngFor="let category of categorys" [value]="category.key"                
+        [ngClass]="{ 'is-invalid': submitted && f.category.errors }" >
+            {{category.value}}
+            </mat-option>
+        </mat-select>        
+    </div>    
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <mat-radio-group class = "tp-radio-group"
+            formControlName="gender" class="form-control"
+            [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
+                [(ngModel)]="employee.Gender">
+            <mat-radio-button class = "tp-radio-button"
+                *ngFor = "let gen of gender" [value] = "gen">
+                {{gen}}
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div class="form-group">        
+        <button [disabled]="loading"   class="btn btn-primary">Save</button>
         <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
-        <a [routerLink]="['/Login']" class="btn btn-link">Cancel</a>
+        <a [routerLink]="['/Employee']" class="btn btn-link">Cancel</a>
     </div>
 </form>
 
@@ -56,4 +140,3 @@
   Spinner Example
 </p> -->
 <ng4-loading-spinner> </ng4-loading-spinner>
-
