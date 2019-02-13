@@ -18,11 +18,9 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class EmployeeService {
-        private employeeUrl = './assets/employee.json';
+        // private employeeUrl = './assets/employee.json';
 
-        constructor(private http: HttpClient) {         
-        
-        }
+        constructor(private http: HttpClient) {}
         private extractData(res: Response) {
           let body = res;
           return body || { };

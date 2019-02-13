@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { EmployeeService } from './employee.service';
 import { FormBuilder, Validators, FormGroup, FormControl } from '@angular/forms';
 
@@ -38,6 +38,7 @@ export const MY_FORMATS = {
 
 
 export class EmployeeAddComponent implements OnInit {  
+  pageTitle='';
     date = new FormControl(moment());
     employee:any;
   employeeForm: FormGroup;
@@ -55,9 +56,13 @@ export class EmployeeAddComponent implements OnInit {
       private router: Router,      
       private authenticationService: AuthenticationService,
       private EmployeeService: EmployeeService,
-      
+      private route :ActivatedRoute, 
       private alertService: AlertService
   ) { 
+    router.events  
+    .forEach(e => {
+      this.pageTitle = route.root.firstChild.snapshot.data['title'];
+    });
       // redirect to home if already logged in
       if (this.authenticationService.currentUserValue) {           
           this.router.navigate(['/Employee/0/add']);

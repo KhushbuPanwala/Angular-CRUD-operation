@@ -1,59 +1,58 @@
-<div class='card' *ngIf='employee'>
-  <div class='card-header'>
-      <h1>
-          Employee Detail
-      </h1>  
-   
-<table  class="tableCss">
-  <tr>
-    <td class="tdStyle"> First Name:</td> 
-    <td> {{employee.FirstName}}</td> 
-  </tr> 
-  <tr>
-    <td class="tdStyle">  Last Name:</td> 
-    <td> {{employee.LastName}}</td> 
-  </tr>           
-  <tr>
-    <td class="tdStyle"> Email:</td> 
-    <td> {{employee.Email}}</td> 
-  </tr> 
-  <tr>
-      <td class="tdStyle"> Mobile No:</td> 
-      <td> {{employee.MobileNo}}</td> 
+<h1>
+    {{pageTitle}}
+ </h1>  
+
+ <div class='card' *ngIf='employee'>
+  <div class='card-header'>      
+  <table  class="tableCss">
+    <tr>
+      <td class="tdStyle"> First Name:</td> 
+      <td> {{employee.FirstName}}</td> 
     </tr> 
     <tr>
-      <td class="tdStyle">  Birth Date:</td> 
-      <td> {{employee.BirthDate| date:'MMM dd, yyyy' }}</td> 
+      <td class="tdStyle">  Last Name:</td> 
+      <td> {{employee.LastName}}</td> 
     </tr>           
     <tr>
-      <td class="tdStyle"> Joining Date:</td> 
-      <td> {{employee.JoiningDate | date:'MMM dd, yyyy' }}</td> 
+      <td class="tdStyle"> Email:</td> 
+      <td> {{employee.Email}}</td> 
     </tr> 
     <tr>
-        <td class="tdStyle"> Department:</td> 
-        <td> {{employee.DeptId}}</td> 
+        <td class="tdStyle"> Mobile No:</td> 
+        <td> {{employee.MobileNo}}</td> 
       </tr> 
       <tr>
-        <td class="tdStyle">  Address:</td> 
-        <td> {{employee.Address}}</td> 
+        <td class="tdStyle">  Birth Date:</td> 
+        <td> {{employee.BirthDate| date:'MMM dd, yyyy' }}</td> 
       </tr>           
       <tr>
-        <td class="tdStyle"> Salary:</td> 
-        <td> {{employee.Salary|currency:'INR':'symbol'}}</td> 
+        <td class="tdStyle"> Joining Date:</td> 
+        <td> {{employee.JoiningDate | date:'MMM dd, yyyy' }}</td> 
       </tr> 
       <tr>
-          <td class="tdStyle"> Categoty:</td> 
-          <td> {{employee.Category}}</td> 
+          <td class="tdStyle"> Department:</td>          
+          <td> {{employee.DeptName}}</td> 
         </tr> 
         <tr>
-            <td class="tdStyle"> Gender:</td> 
-            <td> {{employee.Gender}}</td> 
+          <td class="tdStyle">  Address:</td> 
+          <td> {{employee.Address}}</td> 
+        </tr>           
+        <tr>
+          <td class="tdStyle"> Salary:</td> 
+          <td> {{employee.Salary |currency:'INR':'symbol'}}</td> 
+        </tr> 
+        <tr>
+            <td class="tdStyle"> Categoty:</td> 
+            <td> {{employee.CatName}}</td> 
           </tr> 
-</table>
-
-  <button mat-raised-button color="primary" matTooltip="Back" (click)="onBack()">BACK</button>  
-  <button mat-raised-button color="accent" matTooltip="Edit" [routerLink]="['/Employee', employee.EmpId,'edit']">          
-    Edit
-  </button>
+          <tr>
+              <td class="tdStyle"> Gender:</td> 
+              <td> {{employee.Gender}}</td> 
+            </tr> 
+  </table>
+  <button  [routerLink]="['/Employee', employee.EmpId,'edit']" class="btn btn-primary">Edit</button>  
+  <a [routerLink]="['/Employee']" class="btn btn-link">Back</a>  
+  <!-- <button mat-raised-button color="primary" matTooltip="Back" (click)="onBack()">BACK</button>  
+  <button mat-raised-button color="accent" matTooltip="Edit" [routerLink]="['/Employee', employee.EmpId,'edit']"> Edit   </button>-->
 </div>
 </div>   

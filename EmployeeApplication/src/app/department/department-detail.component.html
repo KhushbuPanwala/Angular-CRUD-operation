@@ -1,9 +1,6 @@
+<h1> {{pageTitle}} </h1>  
 <div class='card' *ngIf='department'>
     <div class='card-header'>
-        <h1>
-            Department Detail
-        </h1>  
-     
   <table  class="tableCss">
       <tr>
           <td class="tdStyle">  Id:</td> 
@@ -14,11 +11,8 @@
       <td> {{department.Name}}</td> 
     </tr> 
   </table>
-  
-    <button mat-raised-button color="primary" matTooltip="Back" (click)="onBack()">BACK</button>  
-    <button mat-raised-button color="accent" matTooltip="Edit" [routerLink]="['/Department', department.DeptId,'edit']">          
-      Edit
-    </button>
+  <button  [routerLink]="['/Department', department.DeptId,'edit']" class="btn btn-primary">Edit</button>  
+  <a [routerLink]="['/Department']" class="btn btn-link">Back</a>  
   </div>
   </div>   
   

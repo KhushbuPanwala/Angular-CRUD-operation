@@ -4,13 +4,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogModule,MatRadioModule,MatDatepickerModule } from '@angular/material';
-// import { DialogComponent } from '../shared/dialog.component';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogModule } from '@angular/material';
 import { AuthGuard } from '../auth/auth.guard';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { DepartmentListComponent } from './department-list.component';
 import { DepartmentDetailComponent } from './department-detail.component';
-import { DepartmentAddComponent } from './department-add.component';
+// import { DepartmentAddComponent } from './department-add.component';
 import { DepartmentEditComponent } from './department-edit.component';
 
 const appRoutes: Routes = [
@@ -28,15 +27,16 @@ const appRoutes: Routes = [
   },
    {    
     path: 'Department/:id/add',     
-    component: DepartmentAddComponent,
+    component: DepartmentEditComponent,
+    // component: DepartmentAddComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Department  Add' }
+    data: { title: 'Department Add' }
    },
   {
     path: 'Department/:id/edit',         
      component: DepartmentEditComponent,
      canActivate: [AuthGuard],
-     data: { title: 'Department  Edit' }
+     data: { title: 'Department Edit' }
   },
   { path: '',
     redirectTo: '/Department ',
@@ -48,14 +48,10 @@ const appRoutes: Routes = [
   declarations: [
     DepartmentListComponent,
     DepartmentDetailComponent,
-    DepartmentAddComponent,
     DepartmentEditComponent,
-    // DialogComponent
+    // DepartmentAddComponent,
   ],
-  // entryComponents: [
-  //   DialogComponent,
-    
-  // ],
+ 
   imports: [
     CommonModule,
     FormsModule,
@@ -67,9 +63,7 @@ const appRoutes: Routes = [
     MatSelectModule,
     MatIconModule,
     MatDialogModule,
-    MatRadioModule,
-    MatDatepickerModule,
-    RouterModule.forRoot(appRoutes),  
+     RouterModule.forRoot(appRoutes),  
     Ng4LoadingSpinnerModule.forRoot(),
   ],
   providers: [],

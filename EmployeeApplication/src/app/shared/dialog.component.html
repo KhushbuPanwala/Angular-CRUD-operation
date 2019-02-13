@@ -4,6 +4,7 @@
       <h3>Are you sure won't to delete ??</h3>  
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-  <button mat-raised-button  color="primary" matTooltip="No" mat-dialog-close>NO</button>  
-  <button mat-raised-button color="accent" matTooltip="Yes" (click)="delete()">YES</button>  
+  <button (click)="delete()" class="btn btn-primary">Yes</button>    
+  <button mat-dialog-close class="btn btn-primary">No</button>      
+  <!-- <a [routerLink]="['/Department']" mat-dialog-close class="btn btn-link">No</a>  -->
 </mat-dialog-actions>

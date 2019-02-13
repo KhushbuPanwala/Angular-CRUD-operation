@@ -6,10 +6,12 @@ export interface IEmployee {
    MobileNo:string   
    BirthDate:Date  
    JoiningDate:Date
-   DeptId:string     
+   DeptId:number,       
+   DeptName:string,     
    Address:string    
    Salary:string     
    Category:number   
+   CatName:string,  
    Gender:string    
  }
  export interface ICategory {

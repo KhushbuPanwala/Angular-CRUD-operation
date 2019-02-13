@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { DepartmentService } from './department.service';
 
 @Component({
@@ -9,11 +8,17 @@ import { DepartmentService } from './department.service';
   styleUrls: ['./department-detail.component.css']
 })
 export class DepartmentDetailComponent implements OnInit {
+  pageTitle='';
   department :any;
   constructor(private departmentService: DepartmentService,
     private route :ActivatedRoute, 
     private router:Router    
-) { }
+) { 
+  router.events  
+  .forEach(e => {
+    this.pageTitle = route.root.firstChild.snapshot.data['title'];
+  });
+}
 
   ngOnInit() {    
     this.departmentService.getDepartment(this.route.snapshot.params['id'])

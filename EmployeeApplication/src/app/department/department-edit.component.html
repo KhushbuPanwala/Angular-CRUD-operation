@@ -1,14 +1,18 @@
-<h2>Update Employee</h2>
+<h2>{{pageTitle}}</h2>
+<div class='card'>
+    <div class='card-header'>
 <form [formGroup]="departmentUpdateForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <label for="deptId">Employee Id</label>
+    <!-- <div class="form-group">
+        <label for="deptId">Department Id</label>
         <input type="text" formControlName="deptId" class="form-control"
             [ngClass]="{ 'is-invalid': submitted && f.deptId.errors }"
             [(ngModel)]="department.DeptId"/>
         <div *ngIf="submitted && f.deptId.errors" class="invalid-feedback">
             <div *ngIf="f.deptId.errors.required">Department Id is required</div>
-        </div>
-    </div>
+        </div> 
+            <label class="form-control" >{{department.DeptId}}</label>
+        
+    </div> -->
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" formControlName="name" class="form-control"
@@ -31,3 +35,5 @@
   Spinner Example
 </p> -->
 <ng4-loading-spinner> </ng4-loading-spinner>
+</div>
+</div>   

@@ -1,38 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="EmployeeMgntDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="EmployeeMgntDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
   <EntityType Name="DepartmentTbl">
     <Key>
       <PropertyRef Name="DeptId" />
     </Key>
-    <Property Name="DeptId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DeptId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="Name" Nullable="false" MaxLength="50" Type="varchar" />
   </EntityType>
   <EntityType Name="EmployeeTbl">
     <Key>
       <PropertyRef Name="EmpId" />
     </Key>
-    <Property Name="EmpId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="MobileNo" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="BirthDate" Type="datetime" Nullable="false" />
-    <Property Name="JoiningDate" Type="datetime" Nullable="false" />
-    <Property Name="DeptId" Type="int" Nullable="false" />
-    <Property Name="Address" Type="varchar" MaxLength="150" />
-    <Property Name="Salary" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="Category" Type="int" Nullable="false" />
-    <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EmpId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="FirstName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="LastName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="Email" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="MobileNo" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="BirthDate" Nullable="false" Type="datetime" />
+    <Property Name="JoiningDate" Nullable="false" Type="datetime" />
+    <Property Name="DeptId" Nullable="false" Type="int" />
+    <Property Name="Address" MaxLength="150" Type="varchar" />
+    <Property Name="Salary" Precision="10" Scale="2" Type="decimal" />
+    <Property Name="Category" Nullable="false" Type="int" />
+    <Property Name="Gender" Nullable="false" MaxLength="50" Type="varchar" />
   </EntityType>
   <EntityType Name="UserTbl">
     <Key>
       <PropertyRef Name="UserId" />
     </Key>
-    <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="UserName" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserId" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+    <Property Name="FirstName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="LastName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="UserName" Nullable="false" MaxLength="50" Type="varchar" />
+    <Property Name="Password" Nullable="false" MaxLength="50" Type="varchar" />
   </EntityType>
   <EntityContainer Name="EmployeeMgntDBModelStoreContainer">
     <EntitySet Name="DepartmentTbl" EntityType="Self.DepartmentTbl" Schema="dbo" store:Type="Tables" />

@@ -1,4 +1,4 @@
-<h2>Add Employee</h2>   
+<h2>{{pageTitle}}</h2>   
 <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
 
     <div class="form-group">
@@ -97,17 +97,17 @@
                 </mat-select>        
             </div>   
       
-        <div class="form-group">
-            <label for="gender">Gender</label>
-            <mat-radio-group class = "tp-radio-group"
-                formControlName="gender" class="form-control"
-                [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
-                    [(ngModel)]="genderSelected">
-                <mat-radio-button class = "tp-radio-button"
-                    *ngFor = "let gen of gender" [value] = "gen">
-                    {{gen}}
-                </mat-radio-button>
-            </mat-radio-group>            
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <mat-radio-group class = "tp-radio-group"
+                    formControlName="gender" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
+                        [(ngModel)]="genderSelected">
+                    <mat-radio-button class = "tp-radio-button"
+                        *ngFor = "let gen of gender" [value] = "gen">
+                        {{gen}}
+                    </mat-radio-button>
+                </mat-radio-group>            
             </div>          
     <div class="form-group">
         <button [disabled]="loading" class="btn btn-primary">Save</button>

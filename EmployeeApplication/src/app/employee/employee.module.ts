@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogModule,MatRadioModule,MatDatepickerModule } from '@angular/material';
+import { MatInputModule, MatButtonModule, MatSelectModule, MatIconModule, MatDialogModule,MatRadioModule,MatDatepickerModule, MatTableModule, MatPaginatorModule } from '@angular/material';
 import { DialogComponent } from '../shared/dialog.component';
 import { AuthGuard } from '../auth/auth.guard';
 
@@ -14,7 +14,7 @@ import { EmployeeDetailComponent } from './employee-detail.component';
 import { EmployeeAddComponent } from './employee-add.component';
 import { EmployeeEditComponent } from './employee-edit.component';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
-
+import {MatSortModule} from '@angular/material/sort';
 const appRoutes: Routes = [
   {
     path: 'Employee',
@@ -30,7 +30,8 @@ const appRoutes: Routes = [
   },
    {    
     path: 'Employee/:id/add',     
-    component: EmployeeAddComponent,
+    // component: EmployeeAddComponent,
+    component:EmployeeEditComponent,
     canActivate: [AuthGuard],
     data: { title: 'Employee Add' }
    },
@@ -72,6 +73,9 @@ const appRoutes: Routes = [
     MatDialogModule,
     MatRadioModule,
     MatDatepickerModule,
+    MatSortModule,
+    MatTableModule,
+    MatPaginatorModule,    
     RouterModule.forRoot(appRoutes),  
     Ng4LoadingSpinnerModule.forRoot(),
   ],

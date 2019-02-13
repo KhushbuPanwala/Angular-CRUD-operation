@@ -17,10 +17,8 @@ namespace EmployeeCRUDAPI.Controllers
         private EmployeeMgntDBEntities db = new EmployeeMgntDBEntities();
         
         public IEnumerable<EmployeeTbl> GetAllEmployees()
-
         {
             //var employees = db.EmployeeTbls.Include(a => a.DepartmentTbl).AsNoTracking().ToListAsync();
-            
             IList<EmployeeTbl> employees = db.EmployeeTbls.ToList();
             return employees;
         }

@@ -1,6 +1,7 @@
-<h2>Update Employee</h2>
-<form [formGroup]="employeeUpdateForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
+<h2>{{pageTitle}}</h2>
+<div class='card'>
+        <div class='card-header'><form [formGroup]="employeeUpdateForm" (ngSubmit)="onSubmit()">
+    <!-- <div class="form-group">
         <label for="empId">Employee Id</label>
         <input type="text" formControlName="empId" class="form-control"
             [ngClass]="{ 'is-invalid': submitted && f.empId.errors }"
@@ -8,7 +9,7 @@
         <div *ngIf="submitted && f.empId.errors" class="invalid-feedback">
             <div *ngIf="f.empId.errors.required">Employee Id is required</div>
         </div>
-    </div>
+    </div> -->
     <div class="form-group">
         <label for="firstName">First Name</label>
         <input type="text" formControlName="firstName" class="form-control"
@@ -45,10 +46,10 @@
         <div *ngIf="submitted && f.mobileNo.errors" class="invalid-feedback">
             <div *ngIf="f.mobileNo.errors.required">Mobile No. is required</div>
             <div *ngIf="f.mobileNo.errors.minlength">Mobile No. must be equal to 10 digit</div>
+            <div *ngIf="f.mobileNo.errors.maxlength">Mobile No. must be equal to 10 digit</div>
         </div>
     </div>    
     
-    <!-- {{employee.BirthDate | date:'MMM dd, yyyy'}} -->
     <div class="form-group">        
         <label for="birthDate"   style="width:100%">Birth Date</label>          
         <input  [matDatepicker]="birthDate"   class="form-control"        
@@ -76,15 +77,17 @@
             <div *ngIf="f.joiningDate.errors.required">Joining Date is required</div>
         </div>      
     </div>
-    <div class="form-group">
+    <div class="form-group">        
         <label for="deptId">Department</label>
-        <input type="text" formControlName="deptId" class="form-control"
-            [ngClass]="{ 'is-invalid': submitted && f.deptId.errors }"
-            [(ngModel)]="employee.DeptId"/>
-        <div *ngIf="submitted && f.deptId.errors" class="invalid-feedback">
-            <div *ngIf="f.deptId.errors.required">Department is required</div>
-        </div>
-    </div>
+        <mat-select [(ngModel)]="employee.DeptId"
+                formControlName="deptId" class="form-control">                
+            <mat-option *ngFor="let dept of departments" [value]="dept.DeptId"
+        [ngClass]="{ 'is-invalid': submitted && f.deptId.errors }" >
+            {{dept.Name}}
+            </mat-option>
+        </mat-select>              
+    </div>    
+
     <div class="form-group">
         <label for="address">Address</label>
         <input type="text" formControlName="address" class="form-control"
@@ -104,20 +107,20 @@
         </div>
     </div>
    
-    
     <div class="form-group">
         <label for="category">Category</label>
-        <mat-select   [(ngModel)]="employee.Category"
+        <mat-select [(ngModel)]="employee.Category"
              formControlName="category" class="form-control">
             <mat-option *ngFor="let category of categorys" [value]="category.key"                
         [ngClass]="{ 'is-invalid': submitted && f.category.errors }" >
             {{category.value}}
             </mat-option>
-        </mat-select>        
+        </mat-select>              
     </div>    
+    
     <div class="form-group">
-        <label for="gender">Gender</label>
-        <mat-radio-group class = "tp-radio-group"
+        <label for="gender">Gender</label>     
+        <mat-radio-group class = "tp-radio-group" 
             formControlName="gender" class="form-control"
             [ngClass]="{ 'is-invalid': submitted && f.gender.errors }"
                 [(ngModel)]="employee.Gender">
@@ -125,7 +128,7 @@
                 *ngFor = "let gen of gender" [value] = "gen">
                 {{gen}}
             </mat-radio-button>
-        </mat-radio-group>
+        </mat-radio-group>      
     </div>
 
     <div class="form-group">        
@@ -140,3 +143,5 @@
   Spinner Example
 </p> -->
 <ng4-loading-spinner> </ng4-loading-spinner>
+</div>
+</div>   

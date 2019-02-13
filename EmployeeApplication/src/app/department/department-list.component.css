@@ -21,7 +21,7 @@ table {
     .tableCss th {
       padding-top: 12px;
       padding-bottom: 12px;
-      background-color: #4CAF50;
+      background-color: #007bffc2;
       color: white;    
       text-align: center;
     }
@@ -30,3 +30,6 @@ table {
       padding-bottom: 8px;    
       text-align: center;
     } 
+    th.mat-sort-header-sorted {
+      color: black;
+    }

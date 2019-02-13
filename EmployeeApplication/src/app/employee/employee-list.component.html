@@ -1,68 +1,78 @@
- <h1>
-  {{pageTitle}}        
-  <div align="end">          
-      <button mat-raised-button color="primary"
-         [routerLink]="['/Employee','0','add']">                     
-        NEW</button>                
-  </div>
-</h1>    
-<table class="tableCss" *ngIf='employees && employees.length'>
-  <thead>
-      <tr>       
-          <!-- <th>Employee Id      </th> -->
-          <th>First Name  </th>
-          <th>Last Name   </th>
-          <th>Email      </th>
-          <th>Mobile No.   </th>
-          <th>Birth Date  </th>
-          <th>Joining Date</th>
-          <th>Department Id     </th>
-          <th>Address    </th>
-          <th>Salary     </th>
-          <th>Category   </th>
-          <th>Gender     </th>
-          <th>Detail</th>     
-          <th>Edit</th>        
-          <th>Delete</th>   
-                               
-        <!-- <th>Name</th>          
-        <th>Address</th>
-        <th>Salary</th>    -->
-
-      </tr>
-  </thead>
-  <tbody>
+ <h1>  {{pageTitle}}
+    <div align="end">
+        <button  [routerLink]="['/Employee','0','add']" class="btn btn-primary">Add</button>
+    </div>
+ </h1>
+ <div class="form-group">
+    <label for="search" >Search by:</label>    
+    <input type="text" class="form-control col-md-4"  (keyup)="applyFilter($event.target.value)"/>              
+  </div> 
+<div>
+  <table  mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
     
-    <tr *ngFor="let emp of employees">       
-      <!-- <td>{{emp.EmpId}}</td>  -->
-      <td>{{emp.FirstName}}</td> 
-      <td>{{emp.LastName}}</td> 
-      <td>{{emp.Email}}</td> 
-      <td>{{emp.MobileNo}}</td> 
-      <td>{{emp.BirthDate| date:'MMM dd, yyyy'}}</td> 
-      <td>{{emp.JoiningDate| date:'MMM dd, yyyy'}}</td> 
-      <td>{{emp.DeptId}}</td> 
-      <td>{{emp.Address}}</td> 
-      <td>{{emp.Salary | currency:'INR':'symbol':'1.2-2'   }}</td> 
-      <td>{{emp.Category}}</td> 
-      <td>{{emp.Gender}}</td> 
-      <td>
-            <a [routerLink]="['/Employee', emp.EmpId] " matTooltip="Detail">    
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>  
-          </a>
-      </td>
-      
-      <td><a [routerLink]="['/Employee', emp.EmpId,'edit']"  matTooltip="Edit">    
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-          <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
-        </svg>    
-        </a>
-      </td>
-      <td><a (click)="openDialog(emp.EmpId)" matTooltip="Delete" >
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
-          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
-        </svg>
-      </a></td>    
-    </tr> 
-  </tbody>
-</table>
+      <ng-container matColumnDef="FirstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.FirstName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="LastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Last Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.LastName}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="JoiningDate">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> JoiningDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.JoiningDate | date:'MMM dd, yyyy'}} </td>
+      </ng-container>
+      <ng-container matColumnDef="DeptName">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Department </th>
+          <td mat-cell *matCellDef="let element"> {{element.DeptName}} </td>
+        </ng-container>
+      <ng-container matColumnDef="CatName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
+        <td mat-cell *matCellDef="let element"> {{element.CatName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Detail">
+        <th mat-header-cell *matHeaderCellDef> Detail </th>
+        <td mat-cell *matCellDef="let element">
+            <a [routerLink]="['/Employee', element.EmpId] " matTooltip="Detail">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+            </a> </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Edit">
+          <th mat-header-cell *matHeaderCellDef > Edit </th>
+          <td mat-cell *matCellDef="let element"> 
+              <a [routerLink]="['/Employee', element.EmpId,'edit']"  matTooltip="Edit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                </svg>
+                </a>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="Delete">
+            <th mat-header-cell *matHeaderCellDef > Delete </th>
+            <td mat-cell *matCellDef="let element">
+               <a (click)="openDialog(element.EmpId)" matTooltip="Delete" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                </svg>
+              </a> 
+            </td>
+          </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5,10,50]" showFirstLastButtons></mat-paginator>
+  
+  </div> 
+
+ 
+
+  
