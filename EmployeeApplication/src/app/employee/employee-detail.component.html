@@ -42,13 +42,17 @@
           <td> {{employee.Salary |currency:'INR':'symbol'}}</td> 
         </tr> 
         <tr>
-            <td class="tdStyle"> Categoty:</td> 
-            <td> {{employee.CatName}}</td> 
-          </tr> 
-          <tr>
-              <td class="tdStyle"> Gender:</td> 
-              <td> {{employee.Gender}}</td> 
-            </tr> 
+          <td class="tdStyle"> Categoty:</td> 
+          <td> {{employee.CatName}}</td> 
+        </tr> 
+        <tr>
+          <td class="tdStyle"> Gender:</td> 
+          <td> {{employee.Gender}}</td> 
+        </tr> 
+        <tr>
+          <td class="tdStyle"> Photo:</td> 
+          <img [src]="employee.Image" height="100" *ngIf="employee.Image">    
+        </tr>
   </table>
   <button  [routerLink]="['/Employee', employee.EmpId,'edit']" class="btn btn-primary">Edit</button>  
   <a [routerLink]="['/Employee']" class="btn btn-link">Back</a>  

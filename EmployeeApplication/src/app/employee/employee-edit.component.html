@@ -1,6 +1,6 @@
 <h2>{{pageTitle}}</h2>
 <div class='card'>
-        <div class='card-header'><form [formGroup]="employeeUpdateForm" (ngSubmit)="onSubmit()">
+        <div class='card-header'><form [formGroup]="employeeUpdateForm" (ngSubmit)="onSubmit(Image)">
     <!-- <div class="form-group">
         <label for="empId">Employee Id</label>
         <input type="text" formControlName="empId" class="form-control"
@@ -80,8 +80,7 @@
             <div *ngIf="f.joiningDate.errors.required">Joining Date is required</div>            
         </div>    
         <div *ngIf="joiningError.isError" class="alert alert-danger">{{ joiningError.errorMessage }}</div>  
-        <div *ngIf="error.isError" class="alert alert-danger">{{ error.errorMessage }}</div>  
-        <!-- <div *ngIf="error.isError" class="alert alert-danger">{{ error.errorMessage }}</div>   -->
+        <div *ngIf="error.isError" class="alert alert-danger">{{ error.errorMessage }}</div>          
         
     </div>
     <div class="form-group">        
@@ -137,14 +136,20 @@
             </mat-radio-button>
         </mat-radio-group>      
     </div>
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="photo">Profile Photo</label>     
-        <!-- <span style="color:red;" *ngIf="message">{{message}}</span> -->
+         <span style="color:red;" *ngIf="message">{{message}}</span> 
          <input #file type="file" class="form-control" 
             accept='image/*' (change)="preview(file.files)"/> 
         <img [src]="imgURL" height="100" *ngIf="imgURL">
+    </div>   -->
+    <div class="form-group">
+        <label for="imageName">Profile Photo</label>           
+        <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">        
+        <img [src]="employee.Image" height="100" *ngIf="employee.Image">       
+        
     </div>  
-    <div class="form-group">        
+     <div class="form-group">        
         <button [disabled]="loading"   class="btn btn-primary">Save</button>
         <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
         <a [routerLink]="['/Employee']" class="btn btn-link">Cancel</a>
@@ -152,9 +157,5 @@
 </form>
 
 <!-- <button (click)="show()">SHOW</button>
-<p>
-  Spinner Example
-</p> -->
-<ng4-loading-spinner> </ng4-loading-spinner>
-</div>
-</div>   
+<ng4-loading-spinner> </ng4-loading-spinner>-->
+

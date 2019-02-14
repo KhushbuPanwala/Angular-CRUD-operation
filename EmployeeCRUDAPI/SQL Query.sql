@@ -2,19 +2,21 @@
 GO
 
 CREATE TABLE [dbo].[EmployeeTbl] (
-    [EmpId]      INT   PRIMARY KEY  IDENTITY (1, 1) NOT NULL,
-    [FirstName]    VARCHAR (50)    NOT NULL,
+    	[EmpId]      INT   PRIMARY KEY  IDENTITY (1, 1) NOT NULL,
+	[FirstName]    VARCHAR (50)    NOT NULL,
 	[LastName]    VARCHAR (50)    NOT NULL,
 	[Email]    VARCHAR (50)    NOT NULL,	
 	[MobileNo]    VARCHAR (50)    NOT NULL,	
 	[BirthDate]   datetime    NOT NULL,	
 	[JoiningDate]   datetime    NOT NULL,	
 	[DeptId] INT NOT NULL,
-    [Address] VARCHAR (150)   NULL,	
-    [Salary]  DECIMAL (10, 2) NULL,
+	[Address] VARCHAR (150)   NULL,	
+	[Salary]  DECIMAL (10, 2) NULL,
 	[Category] INT    NOT NULL,	
-	[Gender]  VARCHAR (50)    NOT NULL,	
-	 FOREIGN KEY ([DeptId]) REFERENCES [DepartmentTbl]([DeptId])
+	[Gender]  VARCHAR (50)    NOT NULL,
+	[Image]	VARBINARY (MAX)    NULL,
+	[ImageName]    VARCHAR(MAX) NULL,	
+	FOREIGN KEY ([DeptId]) REFERENCES [DepartmentTbl]([DeptId])
 );
 
 --drop table [EmployeeTbl]

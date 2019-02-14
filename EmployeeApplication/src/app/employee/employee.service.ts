@@ -17,7 +17,6 @@ const httpOptions = {
 })
 export class EmployeeService {
         // private employeeUrl = './assets/employee.json';
-
         constructor(private http: HttpClient) {}
 
         private extractData(res: Response) {
@@ -40,8 +39,8 @@ export class EmployeeService {
             catchError(this.handleError<any>('addEmployee')));
         }
         
-        updateEmployee (id, employee): Observable<any> {                    
-             return this.http.put(endpoint + '/' + id, JSON.stringify(employee), httpOptions).pipe(            
+        updateEmployee (id, employee): Observable<any> {
+            return this.http.put(endpoint + '/' + id, JSON.stringify(employee), httpOptions).pipe(            
             catchError(this.handleError<any>('updateEmployee'))
           );          
         }
@@ -50,7 +49,16 @@ export class EmployeeService {
             return this.http.delete(endpoint+ "/" + id).pipe(  
               map(this.extractData));                    
         }
-     
+
+        postFile(caption: string, fileToUpload: File) {           
+          const endpoint = 'http://localhost:53343/api/UploadImage';
+          const formData: FormData = new FormData();
+          formData.append('Image', fileToUpload, fileToUpload.name);
+          formData.append('ImageCaption', caption);          
+          return this.http
+            .post(endpoint, formData);
+        }
+
         private handleError<T> (operation = 'operation', result?: T) {
           return (error: any): Observable<T> => {        
             // TODO: send the error to remote logging infrastructure
@@ -62,10 +70,6 @@ export class EmployeeService {
             // Let the app keep running by returning an empty result.
             return of(result as T);
           };
-        }
-
+      }
+}
        
-  }
-   
-       
-        

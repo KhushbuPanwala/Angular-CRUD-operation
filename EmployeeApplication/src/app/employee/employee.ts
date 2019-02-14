@@ -12,7 +12,9 @@ export interface IEmployee {
    Salary:string     
    Category:number   
    CatName:string,  
-   Gender:string    
+   Gender:string,
+   ImageName:string,
+   Image: string,
  }
  export interface ICategory {
   key: number;

@@ -1,21 +1,20 @@
-﻿//using EmployeeCRUDAPI.Models;
-using EmployeeCRUDAPI.Models;
+﻿using EmployeeCRUDAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+
+using System.IO;
 using System.Linq;
-using System.Net;
 using System.Web;
 using System.Web.Http;
-//using System.Web.Http.Cors;
-using System.Web.Mvc;
+
 
 namespace EmployeeCRUDAPI.Controllers
 {
     public class HomeController : ApiController
     {
         private EmployeeMgntDBEntities db = new EmployeeMgntDBEntities();
-        
+
         public IEnumerable<EmployeeTbl> GetAllEmployees()
         {
             //var employees = db.EmployeeTbls.Include(a => a.DepartmentTbl).AsNoTracking().ToListAsync();
@@ -47,11 +46,24 @@ namespace EmployeeCRUDAPI.Controllers
             return Ok();
         }
 
+
         public IHttpActionResult Put(EmployeeTbl employee)
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");
 
+            var filePath = HttpContext.Current.Server.MapPath("~/Image/" + employee.ImageName);
+            employee.Image = Convert.ToBase64String(File.ReadAllBytes(filePath));
+
+            string ext = Path.GetExtension(filePath);
+
+            if (ext == ".jpg")
+                employee.Image = "data:image/jpeg;base64," + employee.Image;
+            else if (ext==".bmp")
+                employee.Image = "data:image/bmp;base64," + employee.Image;            
+            else if (ext == ".png")
+                employee.Image = "data:image/png;base64," + employee.Image;
+            
             db.Entry(employee).State = EntityState.Modified;
             db.SaveChanges();
             return Ok();

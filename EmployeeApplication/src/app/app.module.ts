@@ -35,7 +35,8 @@ const appRoutes: Routes = [
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent,                
+        RegisterComponent,
+                        
     ],
     imports: [
         BrowserModule,

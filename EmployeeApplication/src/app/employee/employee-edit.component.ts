@@ -82,30 +82,9 @@ export class EmployeeEditComponent implements OnInit {
   joiningError:any={isError:false,errorMessage:''};
   error:any={isError:false,errorMessage:''};
 
-  //Image upload & Preview
-  public imagePath;
-  imgURL: any;
-  public message: string;
- 
-  preview(files) {
-    if (files.length === 0)
-      return;
- 
-    var mimeType = files[0].type;
-    if (mimeType.match(/image\/*/) == null) {
-      this.message = "Only images are supported.";
-      return;
-    }
- 
-    var reader = new FileReader();
-    this.imagePath = files;
-    reader.readAsDataURL(files[0]); 
-    reader.onload = (_event) => { 
-      this.imgURL = reader.result; 
-    }
-  }
-
-  constructor(
+//image upload and display
+fileToUpload: File = null;
+constructor(
     private formBuilder: FormBuilder,
     private router: Router,      
     private route: ActivatedRoute,
@@ -113,11 +92,11 @@ export class EmployeeEditComponent implements OnInit {
     private employeeService: EmployeeService,
     private departmentService: DepartmentService,
     private alertService: AlertService,
-    private spinnerService: Ng4LoadingSpinnerService
+    private spinnerService: Ng4LoadingSpinnerService,
+  
 ) 
 { 
-
-  router.events  
+    router.events  
   .forEach(e => {
     this.pageTitle = route.root.firstChild.snapshot.data['title'];
   });
@@ -138,8 +117,8 @@ export class EmployeeEditComponent implements OnInit {
 ngOnInit() {  
   this.departments =this.route.snapshot.data['department'];
   // this.departments =this.route.snapshot.data['department'];
-  this.employee =this.route.snapshot.data['employee'];
-  // if (this.id!=0)
+  this.employee =this.route.snapshot.data['employee'];  
+  
   if (this.id==0)
   {    
     this.employee.Gender='Male';
@@ -176,6 +155,7 @@ ngOnInit() {
     salary:['', Validators.required],
     category:['', Validators.required],
     gender:['', Validators.required],      
+    // imageName:['', Validators.required],      
       // password: ['', [Validators.required, Validators.minLength(6)]]
   });
   // this.getDepartments();
@@ -193,7 +173,8 @@ getDepartments() {
 // convenience getter for easy access to form fields
  get f() { return this.employeeUpdateForm.controls; }
  selectedDate:Date;
- onSubmit() {  
+ onSubmit(Image) {  
+   
      this.submitted = true;     
      //check all date validation
      if (this.compareTwoDates())
@@ -206,8 +187,23 @@ getDepartments() {
      this.loading = true;               
     //  alert( moment(this.selectedDate).format().substring(0, 10));    
     this.employee.BirthDate = moment(this.employee.BirthDate).format().substring(0, 10); 
-    this.employee.JoiningDate = moment(this.employee.JoiningDate).format().substring(0, 10); 
- 
+    this.employee.JoiningDate = moment(this.employee.JoiningDate).format().substring(0, 10);     
+    
+  if  (this.fileToUpload)
+  {
+   this.employeeService.postFile(this.employee.ImageName,this.fileToUpload).subscribe(
+      data =>{                       
+        this.employee.ImageName=data;        
+        this.saveData();                
+      }
+    );
+  }
+  else{   
+    this.saveData();
+   }  
+  }
+saveData(){
+  this.employee.Image='';
   if (this.id==0)
   {    
     this.employeeService.addEmployee(this.employee)
@@ -223,8 +219,7 @@ getDepartments() {
                 });
   }
   else
-  {
-
+  {    
     //  this.employeeService.updateEmployee(this.id,this.employeeUpdateForm.value)    
     this.employeeService.updateEmployee(this.id,this.employee)    
      .pipe(first())
@@ -239,8 +234,7 @@ getDepartments() {
                  this.loading = false;
              });             
     }
-  }
-
+}
   //Birthdate validation
   validateBirthDate(){      
     this.birthDate = moment(this.employeeUpdateForm.controls['birthDate'].value).format().substring(0, 10); 
@@ -284,9 +278,47 @@ compareTwoDates():boolean{
     return false;
   }
 }
+
 //  show()
 //  {
 //    this.spinnerService.show();
 //    setTimeout(()=>this.spinnerService.hide(),3000)
 //  }
+
+  
+  //Image upload & Preview
+  // public imagePath;
+  // imgURL: any;
+  // public message: string; 
+  // preview(files) {
+  //   if (files.length === 0)
+  //     return;
+ 
+  //   var mimeType = files[0].type;
+  //   if (mimeType.match(/image\/*/) == null) {
+  //     this.message = "Only images are supported.";
+  //     return;
+  //   }
+  //   var reader = new FileReader();
+  //   this.imagePath = files;
+  //   reader.readAsDataURL(files[0]); 
+  //   reader.onload = (_event) => { 
+  //     this.imgURL = reader.result; 
+  //   }
+  // }
+  
+  
+  handleFileInput(file: FileList) {
+    this.fileToUpload = file.item(0);
+    
+    //Show image preview
+    var reader = new FileReader();
+    reader.onload = (event:any) => {
+      // this.imageUrl = event.target.result;
+      this.employee.Image = event.target.result;
+    }
+    reader.readAsDataURL(this.fileToUpload);    
+    
+    
+  }  
 }

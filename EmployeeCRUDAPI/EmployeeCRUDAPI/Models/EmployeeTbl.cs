@@ -26,5 +26,7 @@ namespace EmployeeCRUDAPI.Models
         public Nullable<decimal> Salary { get; set; }
         public int Category { get; set; }
         public string Gender { get; set; }
+        public string Image { get; set; }
+        public string ImageName { get; set; }
     }
 }

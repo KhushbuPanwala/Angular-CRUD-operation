@@ -176,34 +176,35 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\DepartmentTbl.cs">
-      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
+      <DependentUpon>EmployeeManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EmployeeMgnt.Context.cs">
+    <Compile Include="Models\EmployeeManagement.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeMgnt.Context.tt</DependentUpon>
+      <DependentUpon>EmployeeManagement.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EmployeeMgnt.cs">
+    <Compile Include="Models\EmployeeManagement.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
+      <DependentUpon>EmployeeManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\EmployeeMgnt.Designer.cs">
+    <Compile Include="Models\EmployeeManagement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
+      <DependentUpon>EmployeeManagement.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\EmployeeTbl.cs">
-      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
+      <DependentUpon>EmployeeManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserTbl.cs">
-      <DependentUpon>EmployeeMgnt.tt</DependentUpon>
+      <DependentUpon>EmployeeManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -216,15 +217,15 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Models\EmployeeMgnt.Context.tt">
+    <Content Include="Models\EmployeeManagement.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
-      <LastGenOutput>EmployeeMgnt.Context.cs</LastGenOutput>
+      <DependentUpon>EmployeeManagement.edmx</DependentUpon>
+      <LastGenOutput>EmployeeManagement.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\EmployeeMgnt.tt">
+    <Content Include="Models\EmployeeManagement.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
-      <LastGenOutput>EmployeeMgnt.cs</LastGenOutput>
+      <DependentUpon>EmployeeManagement.edmx</DependentUpon>
+      <LastGenOutput>EmployeeManagement.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -247,12 +248,12 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="Models\EmployeeMgnt.edmx">
+    <EntityDeploy Include="Models\EmployeeManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EmployeeMgnt.Designer.cs</LastGenOutput>
+      <LastGenOutput>EmployeeManagement.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\EmployeeMgnt.edmx.diagram">
-      <DependentUpon>EmployeeMgnt.edmx</DependentUpon>
+    <Content Include="Models\EmployeeManagement.edmx.diagram">
+      <DependentUpon>EmployeeManagement.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
