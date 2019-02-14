@@ -23,6 +23,7 @@ const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },    
     { path: 'Login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
+    // { path: 'image', component:ImageComponent },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
@@ -34,23 +35,22 @@ const appRoutes: Routes = [
         AlertComponent,
         HomeComponent,
         LoginComponent,
-        RegisterComponent,
-        
+        RegisterComponent,                
     ],
     imports: [
         BrowserModule,
         ReactiveFormsModule,
         HttpClientModule,        
-        // Routing,
+        // Routing,       
         RouterModule.forRoot(appRoutes),
         Ng4LoadingSpinnerModule.forRoot(),
-         EmployeeModule,
-         DepartmentModule
+        EmployeeModule,
+        DepartmentModule,
+        
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
-
         // provider used to create fake backend
         fakeBackendProvider        
     ],

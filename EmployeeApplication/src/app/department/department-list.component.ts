@@ -5,8 +5,6 @@ import { DialogComponent } from '../shared/dialog.component';
 import { IDepartment } from './department';
 import { DepartmentService } from './department.service';
 
-
-
 @Component({
   selector: 'app-department-list',
   templateUrl: './department-list.component.html',
@@ -25,7 +23,6 @@ export class DepartmentListComponent implements OnInit {
     this.filteredDepartments = this.listFilter ? this.performFilter(this.listFilter) : this.departments;
   }
   filteredDepartments: IDepartment[] = [];
-
 
   constructor(public departmentService:DepartmentService, 
             private route: ActivatedRoute,    

@@ -20,15 +20,16 @@ export class LoginComponent implements OnInit {
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-         private authenticationService: AuthenticationService,
-        //  private loginService: LoginService,
+          private authenticationService: AuthenticationService,
+        //   private loginService: LoginService,
         private alertService: AlertService
     ) {
         // redirect to home if already logged in
         // if (this.loginService.currentUserValue) { 
         //     this.router.navigate(['/']);
-        // }
+        // }        
         if (this.authenticationService.currentUserValue) { 
+            
             this.router.navigate(['/']);
         }
     }
@@ -39,7 +40,7 @@ export class LoginComponent implements OnInit {
             password: ['', Validators.required]
         });
 
-        // get return url from route parameters or default to '/'
+        // get return url from route parameters or default to '/'        
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
@@ -61,7 +62,8 @@ export class LoginComponent implements OnInit {
         this.authenticationService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
-                data => {
+                 
+                data => {                    
                     // this.users = data;                        
                     this.router.navigate([this.returnUrl]);
                 },

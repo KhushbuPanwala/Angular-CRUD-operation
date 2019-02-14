@@ -22,11 +22,11 @@ export class DepartmentService {
       return body || { };
     }
   
-      getDepartments(): Observable<any> {
+      getDepartments(): Observable<any> {        
       return this.http.get(endpoint).pipe(  
         map(this.extractData));
     }
-    getDepartment(id): Observable<any> {          
+    getDepartment(id): Observable<any> {                
       return this.http.get(endpoint +'/'+  id).pipe(          
         map(this.extractData));
     }

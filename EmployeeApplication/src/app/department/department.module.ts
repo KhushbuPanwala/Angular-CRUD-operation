@@ -11,37 +11,41 @@ import { DepartmentListComponent } from './department-list.component';
 import { DepartmentDetailComponent } from './department-detail.component';
 // import { DepartmentAddComponent } from './department-add.component';
 import { DepartmentEditComponent } from './department-edit.component';
+import { DepartmentResolverService } from './department-resolver.service';
 
 const appRoutes: Routes = [
   {
     path: 'Department',
     component: DepartmentListComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Department List' }
+    data: { title: 'Department List' ,moduleName:'Department'}
   },
   {
     path: 'Department/:id',
     component: DepartmentDetailComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Department  Details' }
+    data: { title: 'Department  Details'},
+    resolve:{department:DepartmentResolverService}
   },
    {    
     path: 'Department/:id/add',     
     component: DepartmentEditComponent,
     // component: DepartmentAddComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Department Add' }
+    data: { title: 'Department Add'},
+    resolve:{department:DepartmentResolverService}
    },
   {
     path: 'Department/:id/edit',         
      component: DepartmentEditComponent,
      canActivate: [AuthGuard],
-     data: { title: 'Department Edit' }
+     data: { title: 'Department Edit'},
+     resolve:{department:DepartmentResolverService}
   },
-  { path: '',
-    redirectTo: '/Department ',
-    pathMatch: 'full'
-  }
+  // { path: '',
+  //   redirectTo: '/Department ',
+  //   pathMatch: 'full'
+  // }
   
 ];
 @NgModule({

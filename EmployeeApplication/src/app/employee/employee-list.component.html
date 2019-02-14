@@ -3,12 +3,13 @@
         <button  [routerLink]="['/Employee','0','add']" class="btn btn-primary">Add</button>
     </div>
  </h1>
- <div class="form-group">
+ 
+ <div class="form-group" *ngIf='employees && employees.length'>
     <label for="search" >Search by:</label>    
     <input type="text" class="form-control col-md-4"  (keyup)="applyFilter($event.target.value)"/>              
   </div> 
-<div>
-  <table  mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <table  mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" >
     
       <ng-container matColumnDef="FirstName">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
@@ -70,9 +71,3 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
     <mat-paginator [pageSizeOptions]="[5,10,50]" showFirstLastButtons></mat-paginator>
-  
-  </div> 
-
- 
-
-  

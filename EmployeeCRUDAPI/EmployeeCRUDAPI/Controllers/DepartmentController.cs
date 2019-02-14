@@ -21,7 +21,11 @@ namespace EmployeeCRUDAPI.Controllers
 
         public IHttpActionResult GetDepartmentById(int id)
         {
-            DepartmentTbl department = db.DepartmentTbls.Find(id);
+            DepartmentTbl department = new DepartmentTbl();
+            if (id!=0)
+            {
+                department = db.DepartmentTbls.Find(id);
+            }
             if (department == null)
             {
                 return NotFound();

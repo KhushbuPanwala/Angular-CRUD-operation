@@ -15,7 +15,7 @@ import { IDepartment } from '../department/department';
   styleUrls: ['./employee-list.component.css'],  
 })
 export class EmployeeListComponent implements OnInit {
-  pageTitle: string  ='';
+  pageTitle: string  ='';  
   employees: IEmployee[];
   departments: IDepartment[];
   errorMessage:'';
@@ -41,29 +41,30 @@ export class EmployeeListComponent implements OnInit {
             )   { 
               router.events  
               .forEach(e => {
-                this.pageTitle = route.root.firstChild.snapshot.data['title'];
-              });              
+                this.pageTitle = route.root.firstChild.snapshot.data['title'];               
+              });                                    
             }
  
- ngOnInit(): void {
-  this.getDepartments();
+ ngOnInit(): void {   
+  // this.getDepartments();    
+  this.departments=this.route.snapshot.data['department'];
   this.getEmployees();   
   
  }
- getDepartments() {
-  this.departments =[];    
-  this.departmentService.getDepartments().subscribe(
-    department => {
-      this.departments = department;               
-    },
-     error => this.errorMessage = <any>error
-  );    
-}
- performFilter(filterBy: string): IEmployee[] {
-   filterBy = filterBy.toLocaleLowerCase();
-   return this.employees.filter((employee: IEmployee) =>
-   employee.FirstName.toLocaleLowerCase().indexOf(filterBy) !== -1);
- }
+//  getDepartments() {
+//   this.departments =[];    
+//   this.departmentService.getDepartments().subscribe(
+//     department => {
+//       this.departments = department;               
+//     },
+//      error => this.errorMessage = <any>error
+//   );    
+// }
+//  performFilter(filterBy: string): IEmployee[] {
+//    filterBy = filterBy.toLocaleLowerCase();
+//    return this.employees.filter((employee: IEmployee) =>
+//    employee.FirstName.toLocaleLowerCase().indexOf(filterBy) !== -1);
+//  }
 
  openDialog(id): void {
   const dialogRef = this.dialog.open(DialogComponent, {
@@ -85,7 +86,11 @@ export class EmployeeListComponent implements OnInit {
         this.employees = employee;    
         this.filteredEmployees = this.employees;           
         this.filteredEmployees.forEach(element => {
-            element.CatName = this.categorys.filter(x => x.key ===+ element.Category)[0].value;           
+            element.CatName = this.categorys.filter(x => x.key ===+ element.Category)[0].value;
+            // if(this.departments.filter(x => x.DeptId ===+ element.DeptId).length!=0 ){
+            //   element.DeptName = this.departments.filter(x => x.DeptId ===+ element.DeptId)[0].Name;           
+            //   // alert(element.DeptName);
+            // }            
             element.DeptName = this.departments.filter(x => x.DeptId ===+ element.DeptId)[0].Name;           
         });
         //  compare two list and assign value to model
@@ -94,7 +99,7 @@ export class EmployeeListComponent implements OnInit {
         //   if (existNotification !=undefined) 
         //   {
         //     obj.DeptName=existNotification.Name;          
-        //     alert(obj.DeptName);
+        //     // alert(obj.DeptName);
         //   }         
         // });
 

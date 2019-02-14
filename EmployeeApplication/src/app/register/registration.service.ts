@@ -22,8 +22,7 @@ export class RegistrationService {
     return body || { };
   }
 
-addUser (user): Observable<any> {          
-    debugger
+addUser (user): Observable<any> {              
   return this.http.post(endpoint , JSON.stringify(user), httpOptions)
   .pipe(
   catchError(this.handleError<any>('addUser')));

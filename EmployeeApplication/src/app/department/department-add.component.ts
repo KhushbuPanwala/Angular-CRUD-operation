@@ -42,7 +42,6 @@ export class DepartmentAddComponent implements OnInit {
     get f() { return this.departmentForm.controls; }
 
     onSubmit() {
-        debugger
         this.submitted = true;
 
         // stop here if form is invalid

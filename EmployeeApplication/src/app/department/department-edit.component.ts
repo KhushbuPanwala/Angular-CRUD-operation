@@ -6,6 +6,8 @@ import { AuthenticationService } from '../service/authentication.service';
 import { AlertService } from '../service/alert.service';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
 import { DepartmentService } from './department.service';
+import { Identifiers } from '@angular/compiler';
+import { IDepartment } from './department';
 
 @Component({
   selector: 'app-department-edit',
@@ -59,9 +61,12 @@ export class DepartmentEditComponent implements OnInit {
 ngOnInit() {   
   if (this.id!=0)
   {
-    this.departmentService.getDepartment(this.id).subscribe((data: {}) => {        
-      this.department = data;
-    });
+    //using resolver
+    this.department =this.route.snapshot.data['department'];
+    // without resolver
+    // this.departmentService.getDepartment(this.id).subscribe((data: {}) => {        
+    //   this.department = data;
+    // });
   }
   this.departmentUpdateForm = this.formBuilder.group({
     // deptId:['', Validators.required],   

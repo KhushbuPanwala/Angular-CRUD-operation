@@ -15,36 +15,44 @@ import { EmployeeAddComponent } from './employee-add.component';
 import { EmployeeEditComponent } from './employee-edit.component';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import {MatSortModule} from '@angular/material/sort';
+import { DepartmentResolverService } from '../department/department-resolver.service';
+import { EmployeeResolverService } from './employee-resolver.service';
 const appRoutes: Routes = [
   {
     path: 'Employee',
     component: EmployeeListComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Employee List' }
+    data: { title: 'Employee List' },
+    resolve:{ department:DepartmentResolverService}
   },
   {
     path: 'Employee/:id',
     component: EmployeeDetailComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Employee Details' }
+    data: { title: 'Employee Details'},
+    resolve:{employee: EmployeeResolverService, department:DepartmentResolverService}
   },
    {    
     path: 'Employee/:id/add',     
     // component: EmployeeAddComponent,
     component:EmployeeEditComponent,
     canActivate: [AuthGuard],
-    data: { title: 'Employee Add' }
+    data: { title: 'Employee Add'},    
+    resolve:{employee: EmployeeResolverService,
+       department:DepartmentResolverService
+      }
    },
   {
     path: 'Employee/:id/edit',         
      component: EmployeeEditComponent,
      canActivate: [AuthGuard],
-     data: { title: 'Employee Edit' }
+     data: { title: 'Employee Edit'},
+     resolve:{employee: EmployeeResolverService, department:DepartmentResolverService}
   },
-  { path: '',
-    redirectTo: '/Employee',
-    pathMatch: 'full'
-  }
+  // { path: '',
+  //   redirectTo: '/Employee',
+  //   pathMatch: 'full'
+  // }
   
 ];
 

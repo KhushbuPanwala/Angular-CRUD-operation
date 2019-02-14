@@ -71,6 +71,40 @@ export class EmployeeEditComponent implements OnInit {
   gender: string[] = ['Male', 'Female'];
   errorMessage='';
   departments: IDepartment[];
+
+  //date validation
+  birthDate:string;
+  joiningDate:string;
+  birthYear:number;
+  joiningYear:number;
+  toDay:string=moment(new Date()).format().substring(0, 10); 
+  birthError:any={isError:false,errorMessage:''};
+  joiningError:any={isError:false,errorMessage:''};
+  error:any={isError:false,errorMessage:''};
+
+  //Image upload & Preview
+  public imagePath;
+  imgURL: any;
+  public message: string;
+ 
+  preview(files) {
+    if (files.length === 0)
+      return;
+ 
+    var mimeType = files[0].type;
+    if (mimeType.match(/image\/*/) == null) {
+      this.message = "Only images are supported.";
+      return;
+    }
+ 
+    var reader = new FileReader();
+    this.imagePath = files;
+    reader.readAsDataURL(files[0]); 
+    reader.onload = (_event) => { 
+      this.imgURL = reader.result; 
+    }
+  }
+
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,      
@@ -102,18 +136,33 @@ export class EmployeeEditComponent implements OnInit {
 }
 
 ngOnInit() {  
-  if (this.id!=0)
-  {
-    this.employeeService.getEmployee(this.id).subscribe((data: {}) => {        
-      this.employee = data;
-    });
-  }
-  else{
-    this.employee=Object.assign({},this.employee)
+  this.departments =this.route.snapshot.data['department'];
+  // this.departments =this.route.snapshot.data['department'];
+  this.employee =this.route.snapshot.data['employee'];
+  // if (this.id!=0)
+  if (this.id==0)
+  {    
     this.employee.Gender='Male';
-    this.employee.Category=0;
-    this.employee.DeptId=3;
+    this.employee.Category=0;    
+    this.employee.DeptId=this.departments[0].DeptId;
+    this.employee.BirthDate= moment(Date.now()).format().substring(0, 10); 
+    this.employee.JoiningDate=moment(Date.now()).format().substring(0, 10); 
+    
+    // this.employee =this.route.snapshot.data['employee'];
+    //   this.employeeService.getEmployee(this.id).subscribe((data: {}) => {        
+    //   this.employee = data;
+    // });
   }
+  // else{
+  //   // this.employee=Object.assign({},this.employee)
+  //   this.employee
+  //   this.employee.Gender='Male';
+  //   this.employee.Category=0;
+  //   this.employee.DeptId=this.departments[0].DeptId;
+  //   this.employee.BirthDate= moment(Date.now()).format().substring(0, 10); 
+  //   this.employee.JoiningDate=moment(Date.now()).format().substring(0, 10); 
+    
+  // }
   this.employeeUpdateForm = this.formBuilder.group({
     // empId:['', Validators.required],   
     firstName:['', Validators.required],
@@ -129,7 +178,7 @@ ngOnInit() {
     gender:['', Validators.required],      
       // password: ['', [Validators.required, Validators.minLength(6)]]
   });
-  this.getDepartments();
+  // this.getDepartments();
 }
 getDepartments() {
   this.departments =[];    
@@ -139,21 +188,26 @@ getDepartments() {
     },
      error => this.errorMessage = <any>error
   );    
-}
+ }
+
 // convenience getter for easy access to form fields
  get f() { return this.employeeUpdateForm.controls; }
  selectedDate:Date;
- onSubmit() {
-  
-     this.submitted = true;
+ onSubmit() {  
+     this.submitted = true;     
+     //check all date validation
+     if (this.compareTwoDates())
+        return;
      // stop here if form is invalid
      if (this.employeeUpdateForm.invalid) {
          return;
      }
+
      this.loading = true;               
     //  alert( moment(this.selectedDate).format().substring(0, 10));    
     this.employee.BirthDate = moment(this.employee.BirthDate).format().substring(0, 10); 
     this.employee.JoiningDate = moment(this.employee.JoiningDate).format().substring(0, 10); 
+ 
   if (this.id==0)
   {    
     this.employeeService.addEmployee(this.employee)
@@ -183,10 +237,53 @@ getDepartments() {
             error => {
                  this.alertService.error(error);
                  this.loading = false;
-             });
-             
+             });             
     }
   }
+
+  //Birthdate validation
+  validateBirthDate(){      
+    this.birthDate = moment(this.employeeUpdateForm.controls['birthDate'].value).format().substring(0, 10); 
+    if  (this.toDay==this.birthDate)
+      this.birthError={isError:true,errorMessage:'Birthdate does not same with current date'};
+    else if  ( this.birthDate > this.toDay )    
+      this.birthError={isError:true,errorMessage:'Birthdate does not greater than current date'};        
+    else     
+      this.birthError={isError:false};    
+  }  
+  //Joining date validation
+  validateJoiningDate(){      
+    this.joiningDate = moment(this.employeeUpdateForm.controls['joiningDate'].value).format().substring(0, 10);     
+    if  ( this.joiningDate > this.toDay )    
+      this.joiningError={isError:true,errorMessage:'Joining date does not  greater than current date'};      
+    else
+      this.joiningError={isError:false};
+  }
+//compare birth and joing date validation
+compareTwoDates():boolean{       
+   this.error=false;
+  // this.birthDate =  moment(this.employeeUpdateForm.controls['birthDate'].value).format().substring(0, 10);    
+  // this.joiningDate = moment(this.employeeUpdateForm.controls['joiningDate'].value).format().substring(0, 10); 
+  this.birthYear= (new Date(this.employeeUpdateForm.controls['birthDate'].value)).getFullYear();
+  this.joiningYear= (new Date(this.employeeUpdateForm.controls['joiningDate'].value)).getFullYear();  
+  this.validateBirthDate();
+  this.validateJoiningDate();
+
+  if ((this.joiningYear-this.birthYear)<=20)
+    this.error={isError:true,errorMessage:'Age must be greater than 20 Year'};
+  
+   if(this.joiningDate==this.birthDate)
+    this.error={isError:true,errorMessage:'Birthdate and Joinnig date can not be same '};    
+   if(this.joiningDate < this.birthDate)
+    this.error={isError:true,errorMessage:'Joinnig date can not less than Birthdate'};        
+  
+  if  (this.joiningError.isError || this.birthError.isError ||this.error)      
+    return true;  
+  else{
+    this.error=false;    
+    return false;
+  }
+}
 //  show()
 //  {
 //    this.spinnerService.show();

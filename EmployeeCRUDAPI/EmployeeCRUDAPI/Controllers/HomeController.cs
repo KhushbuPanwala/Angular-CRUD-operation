@@ -25,7 +25,11 @@ namespace EmployeeCRUDAPI.Controllers
 
         public IHttpActionResult GetEmployeeById(int id)
         {
-            EmployeeTbl employee = db.EmployeeTbls.Find(id);
+            EmployeeTbl employee = new EmployeeTbl();
+            if (id != 0)
+            {
+                employee = db.EmployeeTbls.Find(id);
+            }
             if (employee == null)
             {
                 return NotFound();

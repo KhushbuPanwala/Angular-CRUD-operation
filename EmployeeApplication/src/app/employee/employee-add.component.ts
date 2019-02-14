@@ -96,8 +96,7 @@ export class EmployeeAddComponent implements OnInit {
     // convenience getter for easy access to form fields
     get f() { return this.employeeForm.controls; }
 
-    onSubmit() {
-        debugger
+    onSubmit() {        
         this.submitted = true;
 
         // stop here if form is invalid
