@@ -20,6 +20,11 @@ export class EmployeeListComponent implements OnInit {
   departments: IDepartment[];
   errorMessage:'';
 
+  //Image disply
+  imageWidth = 50;
+  imageMargin = 2;
+  showImage = true;
+  
   filteredEmployees: IEmployee[] = [];
   categorys: ICategory[] = [
     {key: 0, value: 'Permanant'},
@@ -27,7 +32,7 @@ export class EmployeeListComponent implements OnInit {
     {key: 2, value: 'Contract'}
   ];  
 
-  displayedColumns: string[] = ['FirstName', 'LastName', 'Email', 'JoiningDate','DeptName','CatName','Detail','Edit','Delete'];
+  displayedColumns: string[] = ['Image','FirstName', 'LastName', 'Email', 'JoiningDate','DeptName','CatName','Detail','Edit','Delete'];
   dataSource = new MatTableDataSource(this.employees);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -117,4 +122,9 @@ export class EmployeeListComponent implements OnInit {
     filterValue = filterValue.trim().toLowerCase(); // Remove whitespace and  lowercase matches
     this.dataSource.filter = filterValue;
   }
+
+  
+toggleImage(): void {
+  this.showImage = !this.showImage;
+}
 }

@@ -22,7 +22,7 @@ export class DepartmentService {
       return body || { };
     }
   
-      getDepartments(): Observable<any> {        
+    getDepartments(): Observable<any> {        
       return this.http.get(endpoint).pipe(  
         map(this.extractData));
     }

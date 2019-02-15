@@ -47,7 +47,7 @@ namespace EmployeeCRUDAPI.Controllers
         }
 
 
-        public IHttpActionResult Put(EmployeeTbl employee)
+        public IHttpActionResult Put(EmployeeTbl employee)  
         {
             if (!ModelState.IsValid)
                 return BadRequest("Not a valid model");

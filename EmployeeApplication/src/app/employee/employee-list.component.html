@@ -1,16 +1,27 @@
  <h1>  {{pageTitle}}
-    <div align="end">
+    <div align="end">            
         <button  [routerLink]="['/Employee','0','add']" class="btn btn-primary">Add</button>
     </div>
  </h1>
- 
  <div class="form-group" *ngIf='employees && employees.length'>
     <label for="search" >Search by:</label>    
-    <input type="text" class="form-control col-md-4"  (keyup)="applyFilter($event.target.value)"/>              
+    <input type="text" class="form-control col-md-4"  (keyup)="applyFilter($event.target.value)"/>                
   </div> 
-
   <table  mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" >
-    
+    <td>
+      <ng-container matColumnDef="Image">
+        <th mat-header-cell *matHeaderCellDef> 
+          <a class='btn btn-primary' (click)='toggleImage()'>{{showImage ? 'Hide' : 'Show'}} Image </a>  
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <img *ngIf='showImage && element.Image!=null'
+          [src]='element.Image' [title]='element.ImageName'
+          [style.width.px]='imageWidth' [style.margin.px]='imageMargin'> 
+          
+        </td> 
+      </ng-container>
+        
+            
       <ng-container matColumnDef="FirstName">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> First Name </th>
         <td mat-cell *matCellDef="let element"> {{element.FirstName}} </td>

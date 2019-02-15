@@ -32,3 +32,4 @@ CREATE TABLE [dbo].[UserTbl] (
     [UserName]  VARCHAR (50) NOT NULL,
     [Password]  VARCHAR (50) NOT NULL
 );
+ALTER TABLE UserTbl ADD UNIQUE (UserName);

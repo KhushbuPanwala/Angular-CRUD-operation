@@ -18,13 +18,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/auth.guard';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { DepartmentModule } from './department/department.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdCarouselNavigation } from './shared/carousel-navigation';
+
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },    
     { path: 'Login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    // { path: 'image', component:ImageComponent },
-
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-                        
+        NgbdCarouselNavigation,        
+               
     ],
     imports: [
         BrowserModule,
@@ -45,6 +47,7 @@ const appRoutes: Routes = [
         // Routing,       
         RouterModule.forRoot(appRoutes),
         Ng4LoadingSpinnerModule.forRoot(),
+        NgbModule,
         EmployeeModule,
         DepartmentModule,
         

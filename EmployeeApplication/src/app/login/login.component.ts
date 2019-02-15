@@ -4,10 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../service/authentication.service';
 import { AlertService } from '../service/alert.service';
-import { LoginService } from './login.service';
-import { InnerSubscriber } from 'rxjs/internal/InnerSubscriber';
 import { User } from '../model/user';
-
 
 @Component({templateUrl: 'login.component.html'})
 export class LoginComponent implements OnInit {
@@ -15,21 +12,16 @@ export class LoginComponent implements OnInit {
     loading = false;
     submitted = false;
     returnUrl: string;
-    // users:User[];
+
     constructor(
         private formBuilder: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
-          private authenticationService: AuthenticationService,
-        //   private loginService: LoginService,
+          private authenticationService: AuthenticationService,       
         private alertService: AlertService
     ) {
-        // redirect to home if already logged in
-        // if (this.loginService.currentUserValue) { 
-        //     this.router.navigate(['/']);
-        // }        
-        if (this.authenticationService.currentUserValue) { 
-            
+        // redirect to home if already logged in      
+        if (this.authenticationService.currentUserValue) {         
             this.router.navigate(['/']);
         }
     }
@@ -40,7 +32,7 @@ export class LoginComponent implements OnInit {
             password: ['', Validators.required]
         });
 
-        // get return url from route parameters or default to '/'        
+        // get return url from route parameters or default to '/'                
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
 
@@ -56,16 +48,12 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        // this.users =[];    
-        
-        // this.loginService.login(this.f.username.value, this.f.password.value)
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
+         this.authenticationService.login(this.f.username.value, this.f.password.value)
             .pipe(first())
             .subscribe(
-                 
-                data => {                    
-                    // this.users = data;                        
+                data => {                                        
                     this.router.navigate([this.returnUrl]);
+                    
                 },
                 error => {
                     this.alertService.error(error);

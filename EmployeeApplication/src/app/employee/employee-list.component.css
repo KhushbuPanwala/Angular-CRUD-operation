@@ -1,6 +1,35 @@
 table {
   width: 100%;
  }
+ tr.mat-header-row {
+  height: 56px;
+  background-color: #007bff;   
+}
+th.mat-header-cell {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  text-align: center;
+  color: white;
+  font-size: 16px !important ;  
+  /* width: 100%; */
+}
+/* .mat-elevation-z8
+{
+     box-shadow: none;
+}  */
+/* .mat-sort-header-container { */
+  /* .mat-sort-header-button {  
+  padding-top: 12px!important;
+  padding-bottom: 12px !important;
+  background-color: #007bffc2 !important;
+  color: white !important ;
+  text-align: center;
+} */
+/* table {
+  width: 100%;
+ }
  .tableCss {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
@@ -29,4 +58,4 @@ table {
     padding-top: 8px;
     padding-bottom: 8px;    
     text-align: center;
-  } 
+  }  */

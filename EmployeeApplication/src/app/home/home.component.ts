@@ -4,18 +4,25 @@ import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../service/authentication.service';
 import { User } from '../model/user';
 import { UserService } from '../service/user.service';
+import { RegistrationService } from '../register/registration.service';
+import { AlertService } from '../service/alert.service';
  
 
 
-@Component({ templateUrl: 'home.component.html' })
+@Component({ 
+    styleUrls: ['home.component.css'],
+    templateUrl: 'home.component.html' ,
+})
 export class HomeComponent implements OnInit, OnDestroy {
     currentUser: User;
     currentUserSubscription: Subscription;
-    users: User[] = [];
+    users: User[];
 
     constructor(
         private authenticationService: AuthenticationService,
-        private userService: UserService,
+        // private userService: UserService,
+        private userService:RegistrationService,
+        private alertService:AlertService,
         
     ) {
         this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
@@ -33,14 +40,15 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
 
     deleteUser(id: number) {
-        this.userService.delete(id).pipe(first()).subscribe(() => {
+        this.userService.deleteUser(id).pipe(first()).subscribe(() => {
+            this.alertService.success('Record deleted successfully!!!', true);
             this.loadAllUsers()
         });
     }
 
-    private loadAllUsers() {
-        this.userService.getAll().pipe(first()).subscribe(users => {
-            this.users = users;
+    private loadAllUsers() {        
+        this.userService.getAllUser().pipe(first()).subscribe(users => {
+            this.users = users;            
         });
     }
    
